@@ -1,8 +1,9 @@
 ﻿using HandsOnMVVMSL.Web;
+using System.ComponentModel;
 
 namespace HandsOnMVVMSL.ViewModels
 {
-    public class DisplayMethodViewModel
+    public class DisplayMethodViewModel : INotifyPropertyChanged
     {
         private readonly Person _person;
         private readonly DisplayMethod _displayAs;
@@ -11,6 +12,14 @@ namespace HandsOnMVVMSL.ViewModels
         {
             _person = person;
             _displayAs = displayAs;
+
+            _person.PropertyChanged += new PropertyChangedEventHandler(PersonPropertyChanged);
+        }
+
+        private void PersonPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName == "FirstName" || e.PropertyName == "LastName" || e.PropertyName == "Email")
+                FirePropertyChanged("Display");
         }
 
         public DisplayMethod DisplayAs
@@ -36,6 +45,14 @@ namespace HandsOnMVVMSL.ViewModels
         public override int GetHashCode()
         {
             return (int)_displayAs;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void FirePropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
