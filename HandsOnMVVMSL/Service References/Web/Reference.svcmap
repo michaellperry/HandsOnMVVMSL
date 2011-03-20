@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="426ca383-fe5a-43ab-9c73-e2cdd61efb2d" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>true</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.ObjectModel.ObservableCollection`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>false</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:55152/AddressBookService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="AddressBookService.wsdl" MetadataType="Wsdl" ID="60b1d041-8e24-417d-bd3d-856f7d1ab38f" SourceId="1" SourceUrl="http://localhost:55152/AddressBookService.svc?wsdl" />
+    <MetadataFile FileName="AddressBookService.xsd" MetadataType="Schema" ID="ddd4b92e-0cb7-47f5-8f96-0e34e3b112e5" SourceId="1" SourceUrl="http://localhost:55152/AddressBookService.svc?xsd=xsd2" />
+    <MetadataFile FileName="AddressBookService1.xsd" MetadataType="Schema" ID="eac9f734-cc4b-482a-9395-80481f6d9cac" SourceId="1" SourceUrl="http://localhost:55152/AddressBookService.svc?xsd=xsd0" />
+    <MetadataFile FileName="AddressBookService.disco" MetadataType="Disco" ID="ebd1a344-3da1-43b9-b5cf-074a39977ada" SourceId="1" SourceUrl="http://localhost:55152/AddressBookService.svc?disco" />
+    <MetadataFile FileName="AddressBookService2.xsd" MetadataType="Schema" ID="60ece823-8952-465c-a64b-6f2fe766719b" SourceId="1" SourceUrl="http://localhost:55152/AddressBookService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

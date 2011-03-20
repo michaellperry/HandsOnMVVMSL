@@ -1,0 +1,17 @@
+﻿<HandsOnMVVMSL_ViewModels:PersonDetailViewModel xmlns:HandsOnMVVMSL_ViewModels="clr-namespace:HandsOnMVVMSL.ViewModels" Email="someone@example.com" FirstName="Commodo morbi mus" LastName="Nec conubia dignissim" Phone="(111) 555-0100">
+	<HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAsOptions>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="Email" Display="Aenean integer vestibulum quisque mauris"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Praesent nullam accumsan adipiscing parturient"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="Email" Display="Aptent cras duis vivamus aliquam"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Sed curabitur donec"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Dis phasellus auctor aliquet"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Nunc etiam congue bibendum est"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="FirstLast" Display="Dictumst consequat convallis vestibulum"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="FirstLast" Display="Vestibulum fusce adipiscing"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="Email" Display="Cursus amet"/>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Lorem hac parturient"/>
+	</HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAsOptions>
+	<HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAs>
+		<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="Email" Display="Class nam maecenas curae aliquam"/>
+	</HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAs>
+</HandsOnMVVMSL_ViewModels:PersonDetailViewModel>

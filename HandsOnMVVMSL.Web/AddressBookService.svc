@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="HandsOnMVVMSL.Web.AddressBookService" CodeBehind="AddressBookService.svc.cs" %>

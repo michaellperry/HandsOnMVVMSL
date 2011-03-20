@@ -1,0 +1,80 @@
+﻿<HandsOnMVVMSL_ViewModels:AddressBookViewModel xmlns:HandsOnMVVMSL_ViewModels="clr-namespace:HandsOnMVVMSL.ViewModels" xmlns:HandsOnMVVMSL_Web="clr-namespace:HandsOnMVVMSL.Web">
+	<HandsOnMVVMSL_ViewModels:AddressBookViewModel.PersonDetail>
+		<HandsOnMVVMSL_ViewModels:PersonDetailViewModel Email="someone@example.com" FirstName="Nam" LastName="Class" Phone="(111) 555-0100">
+			<HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAsOptions>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Maecenas nam curabitur praesent"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Phasellus adipiscing duis sed mauris"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="FirstLast" Display="Consequat class"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Dis curae convallis accumsan"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="FirstLast" Display="Donec nullam"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="Email" Display="Bibendum aptent parturient"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="Email" Display="Dignissim nunc etiam"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Est amet dictumst fusce"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Lorem morbi nulla elementum facilisis"/>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="FirstLast" Display="Integer fermentum"/>
+			</HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAsOptions>
+			<HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAs>
+				<HandsOnMVVMSL_ViewModels:DisplayMethodViewModel DisplayAs="LastFirst" Display="Aliquam cras vestibulum aenean"/>
+			</HandsOnMVVMSL_ViewModels:PersonDetailViewModel.DisplayAs>
+		</HandsOnMVVMSL_ViewModels:PersonDetailViewModel>
+	</HandsOnMVVMSL_ViewModels:AddressBookViewModel.PersonDetail>
+	<HandsOnMVVMSL_ViewModels:AddressBookViewModel.SelectedSummary>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Aaberg, Jesper">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="LastFirst" Email="Hendrerit habitant vestibulum" FirstName="Vivamus congue" LastName="Himenaeos inceptos cursus mus" Phone="Interdum adipiscing"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+	</HandsOnMVVMSL_ViewModels:AddressBookViewModel.SelectedSummary>
+	<HandsOnMVVMSL_ViewModels:AddressBookViewModel.Summaries>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Adams, Ellen">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Nec dictum aliquam aliquet non" FirstName="Blandit eget commodo ipsum justo" LastName="Nascetur conubia pharetra per imperdiet" Phone="Lectus sed"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Adams, Terry">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="LastFirst" Email="Sem vestibulum sit" FirstName="Placerat elit enim lacus ligula" LastName="Litora lorem luctus" Phone="Magnis dapibus mattis erat malesuada"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Adams, Terry">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="LastFirst" Email="Sagittis egestas metus morbi" FirstName="Sed penatibus senectus vestibulum" LastName="Dis adipiscing" Phone="Est mauris porttitor hac"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Penor, Lori">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Netus parturient nulla" FirstName="Tristique mus vestibulum" LastName="Ultricies eros vestibulum porta venenatis" Phone="Nec nibh"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Pfeiffer, Michael">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="Email" Email="Vulputate mollis" FirstName="Purus sociosqu montes" LastName="Nisl risus euismod feugiat nostra" Phone="Ornare platea vestibulum"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Philips, Carol">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Primis rutrum phasellus suscipit" FirstName="Vestibulum vitae gravida torquent iaculis" LastName="Per sed lacinia" Phone="Consequat convallis dignissim"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Poe, Toni">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Elementum natoque curae sit posuere" FirstName="Facilisis donec ultrices potenti" LastName="Sapien odio orci" Phone="Parturient fermentum"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Hicks, Cassie">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Pretium fringilla rhoncus quis fusce" FirstName="Urna habitasse hendrerit maecenas sodales" LastName="Semper cras" Phone="Praesent himenaeos accumsan"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Argentiero, Luca">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Nam sed vestibulum vestibulum" FirstName="Duis dis" LastName="Adipiscing malesuada viverra est nunc" Phone="Amet penatibus parturient hac sociis"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+		<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel Display="Perry, Brian">
+			<HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+				<HandsOnMVVMSL_Web:Person DisplayAs="FirstLast" Email="Vestibulum porttitor mus eleifend" FirstName="Nec non" LastName="Arcu aliquam tellus" Phone="Diam tempor vestibulum facilisi tempus"/>
+			</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel.Person>
+		</HandsOnMVVMSL_ViewModels:PersonSummaryViewModel>
+	</HandsOnMVVMSL_ViewModels:AddressBookViewModel.Summaries>
+</HandsOnMVVMSL_ViewModels:AddressBookViewModel>

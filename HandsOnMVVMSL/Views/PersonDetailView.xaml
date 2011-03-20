@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="HandsOnMVVMSL.Views.PersonDetailView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300" d:DesignWidth="400">
+	<UserControl.Resources>
+		<DataTemplate x:Key="DisplayMethodViewModelTemplate">
+			<StackPanel>
+				<TextBlock Text="{Binding Display}"/>
+				<TextBlock Text="{Binding DisplayAs}"/>
+			</StackPanel>
+		</DataTemplate>
+	</UserControl.Resources>
+    
+    <Grid x:Name="LayoutRoot" Background="White" d:DataContext="{d:DesignData /SampleData/PersonDetailViewModelSampleData.xaml}">
+    	<Grid.ColumnDefinitions>
+    		<ColumnDefinition Width="Auto"/>
+    		<ColumnDefinition Width="0.522*"/>
+    	</Grid.ColumnDefinitions>
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="0.26*"/>
+    	</Grid.RowDefinitions>
+    	<TextBlock TextWrapping="Wrap" Text="First Name:" Margin="8" VerticalAlignment="Center"/>
+    	<TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Last Name:" Margin="8" VerticalAlignment="Center"/>
+    	<TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Email:" Margin="8" VerticalAlignment="Center"/>
+    	<TextBlock Grid.Row="3" TextWrapping="Wrap" Text="Phone:" Margin="8" VerticalAlignment="Center"/>
+    	<TextBlock Grid.Row="4" TextWrapping="Wrap" Text="Display As:" Margin="8" VerticalAlignment="Center"/>
+    	<TextBox Grid.Column="1" Text="{Binding FirstName, Mode=TwoWay}" Margin="8"/>
+    	<TextBox Grid.Column="1" Grid.Row="1" Text="{Binding LastName, Mode=TwoWay}" Margin="8"/>
+    	<TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Email, Mode=TwoWay}" Margin="8"/>
+    	<TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Phone, Mode=TwoWay}" Margin="8"/>
+    	<ComboBox Grid.Column="1" Grid.Row="4" ItemTemplate="{StaticResource DisplayMethodViewModelTemplate}" ItemsSource="{Binding DisplayAsOptions}" SelectedItem="{Binding DisplayAs, Mode=TwoWay}" Margin="8"/>
+
+    </Grid>
+</UserControl>
