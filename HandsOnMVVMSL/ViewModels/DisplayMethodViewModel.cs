@@ -22,5 +22,20 @@ namespace HandsOnMVVMSL.ViewModels
         {
             get { return _person.DisplayUsingMethod(_displayAs); }
         }
+
+        public override bool Equals(object obj)
+        {
+            if (this == obj)
+                return true;
+            DisplayMethodViewModel that = obj as DisplayMethodViewModel;
+            if (that == null)
+                return false;
+            return _displayAs == that._displayAs;
+        }
+
+        public override int GetHashCode()
+        {
+            return (int)_displayAs;
+        }
     }
 }

@@ -45,6 +45,7 @@ namespace HandsOnMVVMSL.ViewModels
                 yield return new DisplayMethodViewModel(_person, DisplayMethod.Email);
             }
         }
+
         public DisplayMethodViewModel DisplayAs
         {
             get { return new DisplayMethodViewModel(_person, _person.DisplayAs); }
