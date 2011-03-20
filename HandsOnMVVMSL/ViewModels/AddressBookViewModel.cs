@@ -23,7 +23,7 @@ namespace HandsOnMVVMSL.ViewModels
                 person => new PersonSummaryViewModel(person),
                 _addressBook.People);
 
-            _navigation.PropertyChanged += new PropertyChangedEventHandler(NavigationPropertyChanged);
+            _navigation.PropertyChanged += NavigationPropertyChanged;
         }
 
         private void NavigationPropertyChanged(object sender, PropertyChangedEventArgs e)
