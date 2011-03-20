@@ -19,8 +19,8 @@
 		</DataTemplate>
 	</UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="White">
-    	<ListBox ItemTemplate="{StaticResource PersonSummaryViewModelTemplate}" ItemsSource="{Binding Summaries}" Margin="8"/>
+    <Grid x:Name="LayoutRoot" Background="#FF353535" d:DataContext="{d:DesignData /SampleData/AddressBookViewModelSampleData.xaml}">
+    	<ListBox ItemTemplate="{StaticResource PersonSummaryViewModelTemplate}" ItemsSource="{Binding Summaries}" Margin="8" SelectedItem="{Binding SelectedSummary, Mode=TwoWay}"/>
 
     </Grid>
 </UserControl>

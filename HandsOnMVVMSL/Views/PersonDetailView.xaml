@@ -9,12 +9,11 @@
 		<DataTemplate x:Key="DisplayMethodViewModelTemplate">
 			<StackPanel>
 				<TextBlock Text="{Binding Display}"/>
-				<TextBlock Text="{Binding DisplayAs}"/>
 			</StackPanel>
 		</DataTemplate>
 	</UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="White" d:DataContext="{d:DesignData /SampleData/PersonDetailViewModelSampleData.xaml}">
+    <Grid x:Name="LayoutRoot" Background="#FF353535" d:DataContext="{d:DesignData /SampleData/PersonDetailViewModelSampleData.xaml}">
     	<Grid.ColumnDefinitions>
     		<ColumnDefinition Width="Auto"/>
     		<ColumnDefinition Width="0.522*"/>
@@ -27,11 +26,11 @@
     		<RowDefinition Height="Auto"/>
     		<RowDefinition Height="0.26*"/>
     	</Grid.RowDefinitions>
-    	<TextBlock TextWrapping="Wrap" Text="First Name:" Margin="8" VerticalAlignment="Center"/>
-    	<TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Last Name:" Margin="8" VerticalAlignment="Center"/>
-    	<TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Email:" Margin="8" VerticalAlignment="Center"/>
-    	<TextBlock Grid.Row="3" TextWrapping="Wrap" Text="Phone:" Margin="8" VerticalAlignment="Center"/>
-    	<TextBlock Grid.Row="4" TextWrapping="Wrap" Text="Display As:" Margin="8" VerticalAlignment="Center"/>
+    	<TextBlock TextWrapping="Wrap" Text="First Name:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
+    	<TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Last Name:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
+    	<TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Email:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
+    	<TextBlock Grid.Row="3" TextWrapping="Wrap" Text="Phone:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
+    	<TextBlock Grid.Row="4" TextWrapping="Wrap" Text="Display As:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
     	<TextBox Grid.Column="1" Text="{Binding FirstName, Mode=TwoWay}" Margin="8"/>
     	<TextBox Grid.Column="1" Grid.Row="1" Text="{Binding LastName, Mode=TwoWay}" Margin="8"/>
     	<TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Email, Mode=TwoWay}" Margin="8"/>

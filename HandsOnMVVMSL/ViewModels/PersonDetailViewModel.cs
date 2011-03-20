@@ -48,7 +48,11 @@ namespace HandsOnMVVMSL.ViewModels
         public DisplayMethodViewModel DisplayAs
         {
             get { return new DisplayMethodViewModel(_person, _person.DisplayAs); }
-            set { _person.DisplayAs = value.DisplayAs; }
+            set
+            {
+                if (value != null)
+                    _person.DisplayAs = value.DisplayAs;
+            }
         }
     }
 }

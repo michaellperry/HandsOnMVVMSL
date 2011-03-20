@@ -6,7 +6,7 @@
     xmlns:HandsOnMVVMSL_Views="clr-namespace:HandsOnMVVMSL.Views" x:Class="HandsOnMVVMSL.MainPage"
     mc:Ignorable="d"
     Loaded="MainPage_Loaded"
-    d:DesignHeight="300" d:DesignWidth="400" d:DataContext="{d:DesignData /SampleData/AddressBookViewModelSampleData.xaml}">
+    d:DesignHeight="300" d:DesignWidth="559" d:DataContext="{d:DesignData /SampleData/AddressBookViewModelSampleData.xaml}">
 
     <Grid x:Name="LayoutRoot" Background="White">
     	<Grid.ColumnDefinitions>
