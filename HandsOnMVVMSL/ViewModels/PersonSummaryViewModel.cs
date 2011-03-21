@@ -27,7 +27,13 @@ namespace HandsOnMVVMSL.ViewModels
 
         public string Display
         {
-            get { return _person.DisplayUsingMethod(_person.DisplayAs); }
+            get
+            {
+                return
+                    string.IsNullOrEmpty(_person.FirstName) && string.IsNullOrEmpty(_person.LastName) && string.IsNullOrEmpty(_person.Email)
+                        ? "<New Person>" :
+                        _person.DisplayUsingMethod(_person.DisplayAs);
+            }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

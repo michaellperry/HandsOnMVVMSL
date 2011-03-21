@@ -20,7 +20,15 @@
 	</UserControl.Resources>
     
     <Grid x:Name="LayoutRoot" Background="#FF353535" d:DataContext="{d:DesignData /SampleData/AddressBookViewModelSampleData.xaml}">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="0.78*"/>
+    		<RowDefinition Height="Auto"/>
+    	</Grid.RowDefinitions>
     	<ListBox ItemTemplate="{StaticResource PersonSummaryViewModelTemplate}" ItemsSource="{Binding Summaries}" Margin="8" SelectedItem="{Binding SelectedSummary, Mode=TwoWay}"/>
+    	<StackPanel Grid.Row="1" Orientation="Horizontal">
+    		<Button Content="New" Margin="8,0,0,8" Width="85" Command="{Binding New}"/>
+    		<Button Content="Delete" Margin="8,0,0,8" Width="85" Command="{Binding Delete}"/>
+    	</StackPanel>
 
     </Grid>
 </UserControl>
