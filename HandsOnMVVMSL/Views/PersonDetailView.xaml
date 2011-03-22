@@ -13,7 +13,7 @@
 		</DataTemplate>
 	</UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="#FF353535">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource BackgroundBrush}" d:DataContext="{d:DesignData /SampleData/PersonSampleData.xaml}">
     	<Grid.ColumnDefinitions>
     		<ColumnDefinition Width="Auto"/>
     		<ColumnDefinition Width="0.522*"/>
@@ -26,7 +26,7 @@
     		<RowDefinition Height="Auto"/>
     		<RowDefinition Height="0.26*"/>
     	</Grid.RowDefinitions>
-    	<TextBlock TextWrapping="Wrap" Text="First Name:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
+    	<TextBlock TextWrapping="Wrap" Text="First Name:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="{StaticResource LabelForegroundBrush}"/>
     	<TextBlock Grid.Row="1" TextWrapping="Wrap" Text="Last Name:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
     	<TextBlock Grid.Row="2" TextWrapping="Wrap" Text="Email:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>
     	<TextBlock Grid.Row="3" TextWrapping="Wrap" Text="Phone:" Margin="8" VerticalAlignment="Center" FontSize="18.667" Foreground="#FFC8A325"/>

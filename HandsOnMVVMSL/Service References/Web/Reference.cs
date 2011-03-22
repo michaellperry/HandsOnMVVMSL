@@ -127,6 +127,11 @@ namespace HandsOnMVVMSL.Web {
         System.IAsyncResult BeginGetPeople(System.AsyncCallback callback, object asyncState);
         
         System.Collections.ObjectModel.ObservableCollection<HandsOnMVVMSL.Web.Person> EndGetPeople(System.IAsyncResult result);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="http://tempuri.org/IAddressBookService/GetPerson", ReplyAction="http://tempuri.org/IAddressBookService/GetPersonResponse")]
+        System.IAsyncResult BeginGetPerson(System.AsyncCallback callback, object asyncState);
+        
+        HandsOnMVVMSL.Web.Person EndGetPerson(System.IAsyncResult result);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -154,6 +159,25 @@ namespace HandsOnMVVMSL.Web {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class GetPersonCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public GetPersonCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public HandsOnMVVMSL.Web.Person Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((HandsOnMVVMSL.Web.Person)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class AddressBookServiceClient : System.ServiceModel.ClientBase<HandsOnMVVMSL.Web.IAddressBookService>, HandsOnMVVMSL.Web.IAddressBookService {
         
         private BeginOperationDelegate onBeginGetPeopleDelegate;
@@ -161,6 +185,12 @@ namespace HandsOnMVVMSL.Web {
         private EndOperationDelegate onEndGetPeopleDelegate;
         
         private System.Threading.SendOrPostCallback onGetPeopleCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginGetPersonDelegate;
+        
+        private EndOperationDelegate onEndGetPersonDelegate;
+        
+        private System.Threading.SendOrPostCallback onGetPersonCompletedDelegate;
         
         private BeginOperationDelegate onBeginOpenDelegate;
         
@@ -217,6 +247,8 @@ namespace HandsOnMVVMSL.Web {
         
         public event System.EventHandler<GetPeopleCompletedEventArgs> GetPeopleCompleted;
         
+        public event System.EventHandler<GetPersonCompletedEventArgs> GetPersonCompleted;
+        
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> OpenCompleted;
         
         public event System.EventHandler<System.ComponentModel.AsyncCompletedEventArgs> CloseCompleted;
@@ -263,6 +295,50 @@ namespace HandsOnMVVMSL.Web {
                 this.onGetPeopleCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetPeopleCompleted);
             }
             base.InvokeAsync(this.onBeginGetPeopleDelegate, null, this.onEndGetPeopleDelegate, this.onGetPeopleCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult HandsOnMVVMSL.Web.IAddressBookService.BeginGetPerson(System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginGetPerson(callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        HandsOnMVVMSL.Web.Person HandsOnMVVMSL.Web.IAddressBookService.EndGetPerson(System.IAsyncResult result) {
+            return base.Channel.EndGetPerson(result);
+        }
+        
+        private System.IAsyncResult OnBeginGetPerson(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            return ((HandsOnMVVMSL.Web.IAddressBookService)(this)).BeginGetPerson(callback, asyncState);
+        }
+        
+        private object[] OnEndGetPerson(System.IAsyncResult result) {
+            HandsOnMVVMSL.Web.Person retVal = ((HandsOnMVVMSL.Web.IAddressBookService)(this)).EndGetPerson(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnGetPersonCompleted(object state) {
+            if ((this.GetPersonCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.GetPersonCompleted(this, new GetPersonCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void GetPersonAsync() {
+            this.GetPersonAsync(null);
+        }
+        
+        public void GetPersonAsync(object userState) {
+            if ((this.onBeginGetPersonDelegate == null)) {
+                this.onBeginGetPersonDelegate = new BeginOperationDelegate(this.OnBeginGetPerson);
+            }
+            if ((this.onEndGetPersonDelegate == null)) {
+                this.onEndGetPersonDelegate = new EndOperationDelegate(this.OnEndGetPerson);
+            }
+            if ((this.onGetPersonCompletedDelegate == null)) {
+                this.onGetPersonCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnGetPersonCompleted);
+            }
+            base.InvokeAsync(this.onBeginGetPersonDelegate, null, this.onEndGetPersonDelegate, this.onGetPersonCompletedDelegate, userState);
         }
         
         private System.IAsyncResult OnBeginOpen(object[] inValues, System.AsyncCallback callback, object asyncState) {
@@ -350,6 +426,18 @@ namespace HandsOnMVVMSL.Web {
             public System.Collections.ObjectModel.ObservableCollection<HandsOnMVVMSL.Web.Person> EndGetPeople(System.IAsyncResult result) {
                 object[] _args = new object[0];
                 System.Collections.ObjectModel.ObservableCollection<HandsOnMVVMSL.Web.Person> _result = ((System.Collections.ObjectModel.ObservableCollection<HandsOnMVVMSL.Web.Person>)(base.EndInvoke("GetPeople", _args, result)));
+                return _result;
+            }
+            
+            public System.IAsyncResult BeginGetPerson(System.AsyncCallback callback, object asyncState) {
+                object[] _args = new object[0];
+                System.IAsyncResult _result = base.BeginInvoke("GetPerson", _args, callback, asyncState);
+                return _result;
+            }
+            
+            public HandsOnMVVMSL.Web.Person EndGetPerson(System.IAsyncResult result) {
+                object[] _args = new object[0];
+                HandsOnMVVMSL.Web.Person _result = ((HandsOnMVVMSL.Web.Person)(base.EndInvoke("GetPerson", _args, result)));
                 return _result;
             }
         }

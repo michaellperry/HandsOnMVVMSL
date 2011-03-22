@@ -43,5 +43,7 @@
             <Setter Property="FontSize" Value="24"/>
             <Setter Property="FontFamily" Value="Arial"/>
         </Style>
+        <SolidColorBrush x:Key="BackgroundBrush" Color="#FF353535"/>
+        <SolidColorBrush x:Key="LabelForegroundBrush" Color="#FFC8A325"/>
     </Application.Resources>
 </Application>

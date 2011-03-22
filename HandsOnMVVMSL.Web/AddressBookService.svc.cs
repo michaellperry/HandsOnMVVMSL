@@ -40,6 +40,7 @@ namespace HandsOnMVVMSL.Web
 
         public Person GetPerson()
         {
+            Thread.Sleep(1000);
             return new Person
             {
                 FirstName = "Mark",

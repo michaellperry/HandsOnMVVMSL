@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using HandsOnMVVMSL.Models;
-using HandsOnMVVMSL.ViewModels;
+using HandsOnMVVMSL.Web;
+using System;
 
 namespace HandsOnMVVMSL
 {
@@ -14,10 +14,15 @@ namespace HandsOnMVVMSL
 
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            AddressBook addressBook = new AddressBook();
-            DataContext = addressBook;
-
-            addressBook.GetPeople(Dispatcher);
+            IAddressBookService service = new AddressBookServiceClient();
+            service.BeginGetPerson(delegate(IAsyncResult result)
+            {
+                Person person = service.EndGetPerson(result);
+                Dispatcher.BeginInvoke(delegate
+                {
+                    DataContext = person;
+                });
+            }, null);
         }
     }
 }

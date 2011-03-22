@@ -1,0 +1,1 @@
+﻿<HandsOnMVVMSL_Web:Person xmlns:HandsOnMVVMSL_Web="clr-namespace:HandsOnMVVMSL.Web" DisplayAs="Email" Email="someone@example.com" FirstName="Class" LastName="Aenean" Phone="(111) 555-0100"/>

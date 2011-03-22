@@ -6,16 +6,19 @@
     xmlns:HandsOnMVVMSL_Views="clr-namespace:HandsOnMVVMSL.Views" x:Class="HandsOnMVVMSL.MainPage"
     mc:Ignorable="d"
     Loaded="MainPage_Loaded"
-    d:DesignHeight="300" d:DesignWidth="559">
+    d:DesignHeight="352" d:DesignWidth="559" d:DataContext="{d:DesignData /SampleData/PersonSampleData.xaml}">
 
-    <Grid x:Name="LayoutRoot" Background="White">
+    <Grid x:Name="LayoutRoot" Background="{StaticResource BackgroundBrush}">
+    	<Grid.RowDefinitions>
+    		<RowDefinition Height="Auto"/>
+    		<RowDefinition Height="0.81*"/>
+    	</Grid.RowDefinitions>
     	<Grid.ColumnDefinitions>
-    		<ColumnDefinition Width="0.4*"/>
-    		<ColumnDefinition Width="0.6*"/>
+    		<ColumnDefinition/>
     	</Grid.ColumnDefinitions>
 
-    	<HandsOnMVVMSL_Views:AddressBookView/>
-    	<HandsOnMVVMSL_Views:PersonDetailView Grid.Column="1" DataContext="{Binding PersonDetail}"/>
+    	<HandsOnMVVMSL_Views:PersonDetailView Grid.Row="1"/>
+    	<TextBlock Margin="8" TextWrapping="Wrap" Text="TextBlock" Foreground="{StaticResource LabelForegroundBrush}" FontSize="26.667" VerticalAlignment="Center"/>
 
     </Grid>
 </UserControl>
