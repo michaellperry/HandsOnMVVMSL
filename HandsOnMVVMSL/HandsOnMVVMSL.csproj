@@ -80,7 +80,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\AddressBook.cs" />
-    <Compile Include="Models\Navigation.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\Web\Reference.cs">
@@ -90,7 +89,6 @@
     </Compile>
     <Compile Include="Utilities\CommandObject.cs" />
     <Compile Include="Utilities\MappedObservableCollection.cs" />
-    <Compile Include="ViewModels\AddressBookViewModel.cs" />
     <Compile Include="ViewModels\DisplayMethodViewModel.cs" />
     <Compile Include="ViewModels\PersonDetailViewModel.cs" />
     <Compile Include="ViewModels\PersonSummaryViewModel.cs" />
@@ -150,10 +148,7 @@
     <WCFMetadataStorage Include="Service References\Web\" />
   </ItemGroup>
   <ItemGroup>
-    <DesignData Include="SampleData\AddressBookViewModelSampleData.xaml">
-      <Generator>MSBuild:MarkupCompilePass1</Generator>
-    </DesignData>
-    <DesignData Include="SampleData\PersonDetailViewModelSampleData.xaml">
+    <DesignData Include="SampleData\AddressBookSampleData.xaml">
       <Generator>MSBuild:MarkupCompilePass1</Generator>
     </DesignData>
   </ItemGroup>

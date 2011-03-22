@@ -17,14 +17,20 @@
 				<TextBlock Text="{Binding Display}"/>
 			</StackPanel>
 		</DataTemplate>
+		<DataTemplate x:Key="PersonTemplate1">
+			<StackPanel Orientation="Horizontal">
+				<TextBlock Text="{Binding FirstName}" Margin="0,0,7,0"/>
+				<TextBlock Text="{Binding LastName}"/>
+			</StackPanel>
+		</DataTemplate>
 	</UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="#FF353535" d:DataContext="{d:DesignData /SampleData/AddressBookViewModelSampleData.xaml}">
+    <Grid x:Name="LayoutRoot" Background="#FF353535" d:DataContext="{d:DesignData /SampleData/AddressBookSampleData.xaml}">
     	<Grid.RowDefinitions>
     		<RowDefinition Height="0.78*"/>
     		<RowDefinition Height="Auto"/>
     	</Grid.RowDefinitions>
-    	<ListBox ItemTemplate="{StaticResource PersonSummaryViewModelTemplate}" ItemsSource="{Binding Summaries}" Margin="8" SelectedItem="{Binding SelectedSummary, Mode=TwoWay}"/>
+    	<ListBox ItemTemplate="{StaticResource PersonTemplate1}" ItemsSource="{Binding People}" Margin="8" SelectedItem="{Binding SelectedSummary, Mode=TwoWay}"/>
     	<StackPanel Grid.Row="1" Orientation="Horizontal">
     		<Button Content="New" Margin="8,0,0,8" Width="85" Command="{Binding New}"/>
     		<Button Content="Delete" Margin="8,0,0,8" Width="85" Command="{Binding Delete}"/>

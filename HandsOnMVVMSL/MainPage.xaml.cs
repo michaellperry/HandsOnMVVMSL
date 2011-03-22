@@ -15,8 +15,7 @@ namespace HandsOnMVVMSL
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
             AddressBook addressBook = new AddressBook();
-            Navigation navigation = new Navigation();
-            DataContext = new AddressBookViewModel(addressBook, navigation);
+            DataContext = addressBook;
 
             addressBook.GetPeople(Dispatcher);
         }

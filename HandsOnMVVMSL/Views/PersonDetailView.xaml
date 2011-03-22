@@ -13,7 +13,7 @@
 		</DataTemplate>
 	</UserControl.Resources>
     
-    <Grid x:Name="LayoutRoot" Background="#FF353535" d:DataContext="{d:DesignData /SampleData/PersonDetailViewModelSampleData.xaml}">
+    <Grid x:Name="LayoutRoot" Background="#FF353535">
     	<Grid.ColumnDefinitions>
     		<ColumnDefinition Width="Auto"/>
     		<ColumnDefinition Width="0.522*"/>
