@@ -36,5 +36,18 @@ namespace HandsOnMVVMSL.Web
                 }
             };
         }
+
+
+        public Person GetPerson()
+        {
+            return new Person
+            {
+                FirstName = "Mark",
+                LastName = "Benford",
+                Email = "mark.benford@fbi.gov",
+                Phone = "876 432-8765",
+                DisplayAs = DisplayMethod.LastFirst
+            };
+        }
     }
 }

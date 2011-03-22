@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 
 namespace HandsOnMVVMSL.Web
 {
@@ -42,5 +39,8 @@ namespace HandsOnMVVMSL.Web
     {
         [OperationContract]
         List<Person> GetPeople();
+
+        [OperationContract]
+        Person GetPerson();
     }
 }
